@@ -19,9 +19,6 @@ public class LoginPage {
         return $x("//input[@id='login-button']");
     }
 
-    public SelenideElement goToDashboard() {
-        return $x("//h6[text()='Dashboard']");
-    }
 
     public SelenideElement errorMessage1() {
         return $x("//span[text()='Required']");

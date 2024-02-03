@@ -52,13 +52,8 @@ public class SwagLabs {
 
 
     }
-
     public void clickLoginButton() {
         loginPage.loginButton().should(Condition.appear, Duration.ofSeconds(15)).click();
-    }
-
-    public void dashboardOpen() {
-        Assert.assertEquals(loginPage.goToDashboard().should(Condition.appear, Duration.ofSeconds(5)).getText(), "Dashboard");
     }
 
     public void enterUsernamePass(String username, String password) {

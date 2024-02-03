@@ -36,10 +36,6 @@ public class StepFile {
         app.clickLoginButton();
     }
 
-    @Then("^User should navigate to dashboard$")
-    public void dashboardOpen() {
-        app.dashboardOpen();
-    }
 
     @And("^User enters (.*) as username and (.*) as password$")
     public void enterUsernamePass(String username, String password) {
