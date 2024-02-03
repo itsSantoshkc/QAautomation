@@ -13,15 +13,13 @@ import io.cucumber.java.en.When;
 
 public class StepFile {
     SwagLabs app;
-//    ApiApplication api;
 
     @Given("^User have open the browser$")
     public void openBrowser() {
         app = new SwagLabs();
         app.openBrowser();
     }
-
-    @When("^User opens the SwagLabs open source page$")
+    @When("^User opens the SwagLabs$")
     public void goToSwagLabs() {
         app.goToSwagLabs();
     }
@@ -37,24 +35,7 @@ public class StepFile {
     }
 
 
-    @And("^User enters (.*) as username and (.*) as password$")
-    public void enterUsernamePass(String username, String password) {
-        app.enterUsernamePass(username, password);
-    }
 
-    @Then("^User should see (.*) error message1$")
-    public void errorMessage1(String expectedErrorMessage) {
-        app.errorMessage1(expectedErrorMessage);
 
-    }
 
-    @Then("^User should see (.*) error message2$")
-    public void errorMessage2(String expectedErrorMessage) {
-        app.errorMessage2(expectedErrorMessage);
-    }
-
-    @When("User enters valid username Admin and password admin123")
-    public void User_enters_valid_username_Admin_and_password_admin() {
-        // Write code here that turns the phrase above into concrete actions
-    }
 }
