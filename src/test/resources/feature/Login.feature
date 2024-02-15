@@ -9,7 +9,7 @@ Feature: CucumberJava
     And User clicks the login button
     And User clicks sort button
     And User sort item in descending order
-    And User clicks the add to cart button
+    And User clicks all add to cart button
     And User clicks the cart button
 
 

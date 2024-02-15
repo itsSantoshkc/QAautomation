@@ -2,11 +2,9 @@ package step_definations;
 
 
 
-import java.util.Map;
 import application.SwagLabs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
@@ -39,7 +37,7 @@ public class StepFile {
     }
 
     @And("^User sort item in descending order")
-    public void ClickSortByNameDescendingButton() throws InterruptedException {
+    public void ClickSortByNameDescendingButton() {
         app.ClickSortByNameDescendingButton();
     }
 
@@ -48,9 +46,11 @@ public class StepFile {
         app.clickCartButton();
     }
 
-    @And("^User clicks the add to cart button")
-    public void ClickAddToCart() throws Exception{
-        app.ClickAddToCart();
+    @And("^User clicks all add to cart button")
+    public void ClickAllAddToCart() {
+        for (int i = 0; i <= 5; i++) {
+            app.ClickAllAddToCart();
+        }
     }
 
 

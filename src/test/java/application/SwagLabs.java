@@ -53,13 +53,11 @@ public class SwagLabs {
         inventoryPage.sortButton().should(Condition.appear,Duration.ofSeconds(25)).click();
     }
 
-    public void ClickSortByNameDescendingButton() throws InterruptedException {
-//        Thread.sleep(10 * 1000);
+    public void ClickSortByNameDescendingButton() {
         inventoryPage.sortByNameDescendingButton().should(Condition.appear,Duration.ofSeconds(35)).click();
     }
-    public void ClickAddToCart() throws InterruptedException {
-//        Thread.sleep(5 * 1000);
-        inventoryPage.addToCart().should(Condition.appear,Duration.ofSeconds(35)).click();
+    public void ClickAllAddToCart()  {
+        inventoryPage.addAllToCart().should(Condition.appear,Duration.ofSeconds(35)).click();
     }
     public void clickCartButton() throws Exception {
         Thread.sleep(5 * 1000);
