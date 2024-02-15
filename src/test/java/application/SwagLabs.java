@@ -7,15 +7,15 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
+import pageobjects.InventoryPage;
 import pageobjects.LoginPage;
-
 
 
 public class SwagLabs {
 
     // Fields to represent different pages or components of the application
     public LoginPage loginPage;
+    public InventoryPage inventoryPage;
 
 
 
@@ -30,8 +30,9 @@ public class SwagLabs {
         driver.navigate().to("https://www.saucedemo.com/v1/index.html");
         WebDriverRunner.setWebDriver(driver);
 
-        loginPage = new LoginPage();
 
+        loginPage = new LoginPage();
+        inventoryPage = new InventoryPage();
     }
 
     public void goToSwagLabs() {
@@ -48,6 +49,23 @@ public class SwagLabs {
     }
 
 
+    public void ClickSortButton() {
+        inventoryPage.sortButton().should(Condition.appear,Duration.ofSeconds(25)).click();
+    }
+
+    public void ClickSortByNameDescendingButton() throws InterruptedException {
+//        Thread.sleep(10 * 1000);
+        inventoryPage.sortByNameDescendingButton().should(Condition.appear,Duration.ofSeconds(35)).click();
+    }
+    public void ClickAddToCart() throws InterruptedException {
+//        Thread.sleep(5 * 1000);
+        inventoryPage.addToCart().should(Condition.appear,Duration.ofSeconds(35)).click();
+    }
+    public void clickCartButton() throws Exception {
+        Thread.sleep(5 * 1000);
+        inventoryPage.cartButton().should(Condition.appear,Duration.ofSeconds(35)).click();
+
+    }
 
 
 }

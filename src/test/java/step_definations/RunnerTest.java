@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "json:output/cucumber.json"},
         features = "classpath:features",
-        tags = "@ValidCredentials")
+        tags = "@Credentials")
 public class RunnerTest extends AbstractTestNGCucumberTests {
 
 }

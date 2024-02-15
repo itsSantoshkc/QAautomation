@@ -28,11 +28,35 @@ public class StepFile {
     public void enterCredential(String userName, String password) {
         app.enterCredential(userName, password);
     }
-
-    @Then("^User clicks the login button$")
+    
+    @And("^User clicks the login button$")
     public void clickLoginButton() {
         app.clickLoginButton();
     }
+    @And("^User clicks sort button")
+    public void ClickSortButton(){
+        app.ClickSortButton();
+    }
+
+    @And("^User sort item in descending order")
+    public void ClickSortByNameDescendingButton() throws InterruptedException {
+        app.ClickSortByNameDescendingButton();
+    }
+
+    @And("^User clicks the cart button")
+    public void clickCartButton() throws Exception{
+        app.clickCartButton();
+    }
+
+    @And("^User clicks the add to cart button")
+    public void ClickAddToCart() throws Exception{
+        app.ClickAddToCart();
+    }
+
+
+
+
+
 
 
 
