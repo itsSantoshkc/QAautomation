@@ -5,6 +5,7 @@ package step_definations;
 import application.SwagLabs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
@@ -51,6 +52,14 @@ public class StepFile {
         for (int i = 0; i <= 5; i++) {
             app.ClickAllAddToCart();
         }
+    }
+    @And("^User opens the menu")
+    public void openMenu() throws Exception{
+        app.clickOpenMenuButton();
+    }
+    @Then("^User Click the logout button")
+    public void ClickLogoutButton() throws Exception {
+        app.clickLogOutButton();
     }
 
 

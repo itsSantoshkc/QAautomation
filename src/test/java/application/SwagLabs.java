@@ -65,5 +65,17 @@ public class SwagLabs {
 
     }
 
+    public void clickOpenMenuButton() throws Exception {
+        var menuButton = inventoryPage.openMenu().should(Condition.appear,Duration.ofSeconds(100));
+            Thread.sleep(2 * 1000);
+        menuButton.click();
+
+    }
+
+    public void clickLogOutButton() throws Exception {
+        Thread.sleep(2 * 1000);
+        inventoryPage.logOutButton().should(Condition.appear,Duration.ofSeconds(100)).click();
+    }
+
 
 }
