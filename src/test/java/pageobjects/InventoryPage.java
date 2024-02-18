@@ -25,6 +25,10 @@ public class InventoryPage {
         return $x("//div[@class='bm-burger-button']");
     }
 
+    public SelenideElement checkoutButton(){
+        return $x("//a[text()='CHECKOUT']");
+    }
+
     public SelenideElement logOutButton(){
         return $x("//a[text()='Logout']");
     }

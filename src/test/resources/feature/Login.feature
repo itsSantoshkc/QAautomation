@@ -7,12 +7,16 @@ Feature: CucumberJava
     When User opens the SwagLabs
     And User enters valid username standard_user and password secret_sauce
     And User clicks the login button
-#    And User clicks sort button
-#    And User sort item in descending order
-#    And User clicks all add to cart button
-#    And User clicks the cart button
+    And User clicks sort button
+    And User sort item in descending order
+    And User clicks all add to cart button
+    And User clicks the cart button
+    And User click the checkout button
+    And User enters valid firstname Santosh , lastname Kc and postcode 44700
+    And User clicks continue button
+    And User finishes checkout process
     And User opens the menu
-    And User Click the logout button
+    Then User Click the logout button
 
 
   @Credentials

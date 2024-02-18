@@ -47,6 +47,25 @@ public class StepFile {
         app.clickCartButton();
     }
 
+    @And("^User click the checkout button")
+    public void clickCheckoutButton() throws Exception{
+        app.clickCheckoutButton();
+    }
+    @And("^User enters valid firstname (.*) , lastname (.*) and postcode (.*)")
+    public void enterCheckoutInformation(String firstName,String lastName,String postalCode) throws Exception{
+        app.enterCheckoutInformation(firstName, lastName, postalCode);
+    }
+
+    @And("^User clicks continue button")
+    public void clickContinueButton(){
+        app.clickContinueButton();
+    }
+
+    @And("^User finishes checkout process")
+    public void clickCheckoutFinishButton(){
+        app.clickCheckoutFinishButton();
+    }
+
     @And("^User clicks all add to cart button")
     public void ClickAllAddToCart() {
         for (int i = 0; i <= 5; i++) {
@@ -61,14 +80,6 @@ public class StepFile {
     public void ClickLogoutButton() throws Exception {
         app.clickLogOutButton();
     }
-
-
-
-
-
-
-
-
 
 
 }

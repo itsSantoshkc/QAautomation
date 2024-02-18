@@ -7,6 +7,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import pageobjects.CheckoutPage;
 import pageobjects.InventoryPage;
 import pageobjects.LoginPage;
 
@@ -16,6 +17,7 @@ public class SwagLabs {
     // Fields to represent different pages or components of the application
     public LoginPage loginPage;
     public InventoryPage inventoryPage;
+    public  CheckoutPage checkoutPage;
 
 
 
@@ -33,6 +35,7 @@ public class SwagLabs {
 
         loginPage = new LoginPage();
         inventoryPage = new InventoryPage();
+        checkoutPage = new CheckoutPage();
     }
 
     public void goToSwagLabs() {
@@ -64,6 +67,27 @@ public class SwagLabs {
         inventoryPage.cartButton().should(Condition.appear,Duration.ofSeconds(35)).click();
 
     }
+
+    public void clickCheckoutButton() throws Exception{
+        Thread.sleep(2 * 1000);
+        inventoryPage.checkoutButton().should(Condition.appear,Duration.ofSeconds(35)).click();
+    }
+
+    public void enterCheckoutInformation(String firstName,String lastName,String postalCode) throws Exception{
+        Thread.sleep(2 * 1000);
+        checkoutPage.enterFirstName().should(Condition.appear,Duration.ofSeconds(10)).sendKeys(firstName);
+        checkoutPage.enterLastName().sendKeys(lastName);
+        checkoutPage.enterPostalCode().sendKeys(postalCode);
+    }
+
+    public void clickContinueButton(){
+        checkoutPage.continueButton().should(Condition.appear,Duration.ofSeconds(15)).click();
+    }
+
+    public void clickCheckoutFinishButton(){
+        checkoutPage.checkoutFinishButton().should(Condition.appear,Duration.ofSeconds(15)).click();
+    }
+
 
     public void clickOpenMenuButton() throws Exception {
         var menuButton = inventoryPage.openMenu().should(Condition.appear,Duration.ofSeconds(100));
